@@ -7,13 +7,13 @@ const MyOrders = () => {
   const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`https://morning-gorge-72713.herokuapp.com/orders?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [control]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteOrder/${id}`, {
+    fetch(`https://morning-gorge-72713.herokuapp.com/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

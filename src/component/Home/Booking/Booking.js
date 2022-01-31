@@ -9,7 +9,7 @@ const Booking = () => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProduct/${serviceId}`)
+    fetch(`https://morning-gorge-72713.herokuapp.com/singleProduct/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
@@ -25,7 +25,7 @@ const Booking = () => {
     data.email = user.email;
     data.status = "pending";
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://morning-gorge-72713.herokuapp.com/orders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

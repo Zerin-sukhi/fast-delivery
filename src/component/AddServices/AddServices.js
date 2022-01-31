@@ -11,7 +11,7 @@ const AddServices = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addServices", {
+    fetch("https://morning-gorge-72713.herokuapp.com/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
